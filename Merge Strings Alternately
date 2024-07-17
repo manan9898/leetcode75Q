@@ -1,0 +1,28 @@
+1768. Merge Strings Alternately 
+
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {string}
+ */
+var mergeAlternately = function(word1, word2) {
+    let result=[]
+    let i=0;
+    let j=0;
+    let temp=0;
+    while(i<word1.length)
+    {
+        result[temp]=word1[i]
+        temp+=2;
+        i++;
+    }
+    let temp1=1;    
+    while(j<word2.length)
+    {
+        result[temp1]=word2[j]
+        temp1+=2;
+        j++
+    }
+   
+    return result.join('');
+};
